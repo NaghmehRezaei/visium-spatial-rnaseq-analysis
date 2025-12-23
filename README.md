@@ -1,81 +1,80 @@
+```text
 # 🧬 Visium Spatial RNA-seq Analysis
 
-**End-to-end spatial transcriptomics analysis using 10x Genomics Visium data
-and Seurat (R).**
+End-to-end analysis of 10x Genomics Visium spatial transcriptomics data
+using Seurat (R).
 
-This repository documents a **complete, reproducible workflow** for processing,
-analyzing, and interpreting Visium spatial RNA-sequencing datasets, from raw
-outputs to biologically interpretable spatial patterns.
+This repository documents a complete, reproducible workflow for processing,
+analyzing, and interpreting spatial RNA-seq data in tissue context.
+The workflow reflects real analysis pipelines used in research laboratories.
 
-The emphasis is on **best practices used in research laboratories**, with
-transparent analytical rationale rather than black-box automation.
+------------------------------------------------------------
 
----
+Repository Scope
 
-## 📌 Scope of This Repository
+This workflow includes:
 
-This workflow covers:
-
-- Quality control of spatial spots
+- Spot-level quality control
 - Normalization and feature selection
-- Dimensionality reduction and clustering
+- Dimensionality reduction (PCA / UMAP)
+- Unsupervised clustering of spatial spots
 - Identification of spatially variable genes
-- Visualization of clusters and gene expression in tissue context
+- Spatial visualization on histology images
 - Optional integration with scRNA-seq references
-- Generation of summary tables for figures and manuscripts
+- Reporting-ready summary tables
 
-📄 **Detailed analytical methods are provided in [`METHODS.md`](METHODS.md).**
+Detailed analytical methods are documented in METHODS.md.
 
----
+------------------------------------------------------------
 
-## 🧪 Technologies & Tools
+Technologies & Tools
 
-- **Seurat (R)** — spatial data processing and visualization  
-- **10x Genomics Visium** — spatial transcriptomics platform  
-- **tidyverse** — data manipulation and reporting  
-- **patchwork / ggplot2** — visualization  
+- Seurat (R)
+- 10x Genomics Visium
+- tidyverse
+- ggplot2 / patchwork
 
----
+------------------------------------------------------------
 
-## 📂 Repository Structure
+Repository Structure
 
-```text
 visium-spatial-rnaseq-analysis/
-├── 00_setup/                      # Environment & package setup
-├── 01_data_import/                # Import Visium data
-├── 02_quality_control/             # Spot-level QC
-├── 03_normalization/               # Normalization & feature selection
-├── 04_dimensionality_reduction/    # PCA / UMAP
-├── 05_clustering_annotation/       # Clustering of spatial spots
-├── 06_spatial_features/            # Spatially variable gene detection
-├── 07_spatial_visualization/       # Tissue-level plots
-├── 08_integration_scRNA/           # scRNA-seq reference mapping (optional)
-├── 09_reporting/                   # Summary tables & exports
+├── 00_setup/
+├── 01_data_import/
+├── 02_quality_control/
+├── 03_normalization/
+├── 04_dimensionality_reduction/
+├── 05_clustering_annotation/
+├── 06_spatial_features/
+├── 07_spatial_visualization/
+├── 08_integration_scRNA/
+├── 09_reporting/
 ├── METHODS.md
 ├── README.md
 └── LICENSE
 
----
+------------------------------------------------------------
 
-🧠 Interpretation Notes
+Interpretation Notes
 
 Spatial transcriptomics data represent spot-level mixtures, not single cells.
 
-Cluster and reference-mapping results should be interpreted as enriched
-transcriptional programs, not definitive cell identities.
+Clusters and reference-mapping results reflect enriched transcriptional
+programs, not definitive cell identities.
 
-Parameters may require tuning for different tissues or experimental designs.
+Parameter tuning may be required depending on tissue type and experimental
+design.
 
----
+------------------------------------------------------------
 
-🔁 Reproducibility
+Reproducibility
 
-This repository reflects real analysis pipelines used in research settings.
+This repository reflects real analysis workflows used in research settings.
 Raw sequencing data and sensitive metadata are intentionally excluded.
 
----
+------------------------------------------------------------
 
-👩‍🔬 Author
+Author
 
 Naghmeh Rezaei
 Computational Biology · Spatial & Single-Cell Genomics
