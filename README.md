@@ -1,4 +1,3 @@
-```text
 # 🧬 Visium Spatial RNA-seq Analysis
 
 End-to-end analysis of 10x Genomics Visium spatial transcriptomics data
@@ -8,9 +7,9 @@ This repository documents a complete, reproducible workflow for processing,
 analyzing, and interpreting spatial RNA-seq data in tissue context.
 The workflow reflects real analysis pipelines used in research laboratories.
 
-------------------------------------------------------------
+---
 
-Repository Scope
+## Repository Scope
 
 This workflow includes:
 
@@ -23,21 +22,22 @@ This workflow includes:
 - Optional integration with scRNA-seq references
 - Reporting-ready summary tables
 
-Detailed analytical methods are documented in METHODS.md.
+Detailed analytical methods are documented in **METHODS.md**.
 
-------------------------------------------------------------
+---
 
-Technologies & Tools
+## Technologies & Tools
 
 - Seurat (R)
 - 10x Genomics Visium
 - tidyverse
 - ggplot2 / patchwork
 
-------------------------------------------------------------
+---
 
-Repository Structure
+## Repository Structure
 
+```text
 visium-spatial-rnaseq-analysis/
 ├── 00_setup/
 ├── 01_data_import/
@@ -53,9 +53,7 @@ visium-spatial-rnaseq-analysis/
 ├── README.md
 └── LICENSE
 
-------------------------------------------------------------
-
-Interpretation Notes
+🧠 Interpretation Notes
 
 Spatial transcriptomics data represent spot-level mixtures, not single cells.
 
@@ -65,16 +63,12 @@ programs, not definitive cell identities.
 Parameter tuning may be required depending on tissue type and experimental
 design.
 
-------------------------------------------------------------
-
-Reproducibility
+🔁 Reproducibility
 
 This repository reflects real analysis workflows used in research settings.
 Raw sequencing data and sensitive metadata are intentionally excluded.
 
-------------------------------------------------------------
-
-Author
+👩‍🔬 Author
 
 Naghmeh Rezaei
 Computational Biology · Spatial & Single-Cell Genomics
