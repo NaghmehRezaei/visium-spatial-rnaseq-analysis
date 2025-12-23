@@ -52,8 +52,9 @@ visium-spatial-rnaseq-analysis/
 ├── METHODS.md
 ├── README.md
 └── LICENSE
+---
 
-🧠 Interpretation Notes
+##🧠 Interpretation Notes
 
 Spatial transcriptomics data represent spot-level mixtures, not single cells.
 
@@ -62,13 +63,15 @@ programs, not definitive cell identities.
 
 Parameter tuning may be required depending on tissue type and experimental
 design.
+---
 
-🔁 Reproducibility
+##🔁 Reproducibility
 
 This repository reflects real analysis workflows used in research settings.
 Raw sequencing data and sensitive metadata are intentionally excluded.
+---
 
-👩‍🔬 Author
+##👩‍🔬 Author
 
 Naghmeh Rezaei
 Computational Biology · Spatial & Single-Cell Genomics
