@@ -1,110 +1,82 @@
-\# Spatial Transcriptomics Analysis with Seurat
+# 🧬 Visium Spatial RNA-seq Analysis
 
+**End-to-end spatial transcriptomics analysis using 10x Genomics Visium data
+and Seurat (R).**
 
+This repository documents a **complete, reproducible workflow** for processing,
+analyzing, and interpreting Visium spatial RNA-sequencing datasets, from raw
+outputs to biologically interpretable spatial patterns.
 
-This repository documents applied analysis workflows for
-
-sequencing-based spatial transcriptomics data (e.g., 10x Genomics
-
-Visium), implemented using the Seurat framework in R.
-
-
-
-The workflows reflect hands-on analysis of representative spatial
-
-datasets and focus on practical analytical steps, including quality
-
-control, normalization, dimensionality reduction, spatial feature
-
-analysis, and visualization of gene expression in tissue context.
-
-
-
-The goal of this repository is to provide transparent, reproducible,
-
-and biologically interpretable spatial transcriptomics analysis
-
-pipelines rather than a turnkey software package.
-
-
-
-📄 Detailed analytical methods are described in
-
-\[METHODS.md](METHODS.md).
-
-
+The emphasis is on **best practices used in research laboratories**, with
+transparent analytical rationale rather than black-box automation.
 
 ---
 
+## 📌 Scope of This Repository
 
+This workflow covers:
 
-\## Scope of Analysis
+- Quality control of spatial spots
+- Normalization and feature selection
+- Dimensionality reduction and clustering
+- Identification of spatially variable genes
+- Visualization of clusters and gene expression in tissue context
+- Optional integration with scRNA-seq references
+- Generation of summary tables for figures and manuscripts
 
-
-
-The workflows in this repository cover:
-
-
-
-\- Import of spatial transcriptomics count matrices and image metadata
-
-\- Spot-level quality control and filtering
-
-\- Normalization and variance stabilization
-
-\- Dimensionality reduction and clustering
-
-\- Identification of spatially variable genes
-
-\- Visualization of spatial expression patterns
-
-\- Optional integration with single-cell RNA-seq references
-
-\- Generation of publication-ready figures and summary tables
-
-
+📄 **Detailed analytical methods are provided in [`METHODS.md`](METHODS.md).**
 
 ---
 
+## 🧪 Technologies & Tools
 
-
-\## Data Availability
-
-
-
-Raw spatial transcriptomics data are not included in this repository.
-
-The scripts are written to operate on representative Visium-style
-
-datasets and may be adapted to user-provided data or publicly available
-
-example datasets.
-
-
+- **Seurat (R)** — spatial data processing and visualization  
+- **10x Genomics Visium** — spatial transcriptomics platform  
+- **tidyverse** — data manipulation and reporting  
+- **patchwork / ggplot2** — visualization  
 
 ---
 
+## 📂 Repository Structure
 
-
-\## Software Environment
-
-
-
-Analyses are performed in R using Seurat and supporting Bioconductor
-
-packages. Scripts are organized in a stepwise manner to reflect a
-
-typical spatial transcriptomics analysis workflow.
-
-
+```text
+visium-spatial-rnaseq-analysis/
+├── 00_setup/                      # Environment & package setup
+├── 01_data_import/                # Import Visium data
+├── 02_quality_control/             # Spot-level QC
+├── 03_normalization/               # Normalization & feature selection
+├── 04_dimensionality_reduction/    # PCA / UMAP
+├── 05_clustering_annotation/       # Clustering of spatial spots
+├── 06_spatial_features/            # Spatially variable gene detection
+├── 07_spatial_visualization/       # Tissue-level plots
+├── 08_integration_scRNA/           # scRNA-seq reference mapping (optional)
+├── 09_reporting/                   # Summary tables & exports
+├── METHODS.md
+├── README.md
+└── LICENSE
 
 ---
 
+🧠 Interpretation Notes
 
+Spatial transcriptomics data represent spot-level mixtures, not single cells.
 
-\## Repository Structure
+Cluster and reference-mapping results should be interpreted as enriched
+transcriptional programs, not definitive cell identities.
 
+Parameters may require tuning for different tissues or experimental designs.
 
+---
 
+🔁 Reproducibility
 
+This repository reflects real analysis pipelines used in research settings.
+Raw sequencing data and sensitive metadata are intentionally excluded.
 
+---
+
+👩‍🔬 Author
+
+Naghmeh Rezaei
+Computational Biology · Spatial & Single-Cell Genomics
+GitHub: https://github.com/NaghmehRezaei
